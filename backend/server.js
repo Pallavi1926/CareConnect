@@ -13,13 +13,29 @@ const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
 
-app.use(cors({
-  origin: [
-    'https://careconnect-front2.onrender.com',
+import cors from "cors";
+
+// ✅ List all frontend domains that will access your backend
+const allowedOrigins = [
+  'https://careconnect-front2.onrender.com',
     'https://careconnect-admin.onrender.com'
-  ],
-  credentials: true,
-}));
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
+
+
 
 
 // middlewares
