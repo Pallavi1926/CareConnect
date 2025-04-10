@@ -15,8 +15,7 @@ connectCloudinary();
 
 app.use(cors({
   origin: [
-    'https://careconnect-front-ky6h.onrender.com/',
-    
+    'https://careconnect-front-ky6h.onrender.com/'
   ],
   credentials: true,
 }));
