@@ -17,7 +17,10 @@ connectCloudinary();
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://careconnect-frontend5.onrender.com/'],
+  credentials: true
+}));
 
 // api endpoints
 app.use("/api/user", userRouter);
