@@ -83,7 +83,7 @@ const Login = () => {
   const [email, setEmail] = useState(ADMIN_EMAIL)
   const [password, setPassword] = useState(ADMIN_PASSWORD)
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL
+  const backendUrl = "https://careconnect-back-lhgb.onrender.com"//import.meta.env.VITE_BACKEND_URL
 
   const { setDToken } = useContext(DoctorContext)
   const { setAToken } = useContext(AdminContext)
