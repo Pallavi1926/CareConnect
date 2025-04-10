@@ -7,7 +7,7 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
 
     const currencySymbol = '₹'
-    const backendUrl = "https://careconnect-backend-6z6p.onrender.com"//import.meta.env.VITE_BACKEND_URL
+    const backendUrl = "https://careconnect-back-lhgb.onrender.com"//import.meta.env.VITE_BACKEND_URL
 
     const [doctors, setDoctors] = useState([])
     const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '')
