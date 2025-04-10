@@ -13,23 +13,14 @@ const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
 
-const allowedOrigins = [
-  'https://careconnect-frontend5.onrender.com/',
-  'https://careconnect-admin.onrender.com/',
-  //'http://localhost:5173', // optional: for local development
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    // allow requests with no origin like Postman or mobile apps
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin: [
+    'https://careconnect-front-ky6h.onrender.com/',
+    
+  ],
   credentials: true,
 }));
+
 
 // middlewares
 app.use(express.json({ limit: "10mb" }));
