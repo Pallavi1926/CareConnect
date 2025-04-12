@@ -114,7 +114,8 @@ Welcome to **CareConnect**, an accessible, multilingual HealthTech web platform 
 ---
 
 ## 📸 Screenshots (optional)
-> *(You can upload screenshots in the repo and add image links here for visual demo.)*
+> ![Screenshot 2025-04-12 222938](https://github.com/user-attachments/assets/0ab64df2-56e6-48cf-bf97-3c89f899593d)
+
 
 ---
 
